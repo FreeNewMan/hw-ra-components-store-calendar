@@ -13,7 +13,7 @@ function getDatesRange(dbgn) {
    let dateRange = [];
    let cr = dbgn;
    cr.setDate(cr.getDate() - 1);
-   for (var i = 0; i < 7 ; i++) { 
+   for (let i = 0; i < 7 ; i++) { 
      cr.setDate(cr.getDate() + 1);
      dateRange.push(new Date(cr));
    };
@@ -33,14 +33,14 @@ function tdCls(curDate, cdate) {
 }
 
 function getWeeks(year, month) {
-  var l=new Date(year, month+1, 0);
+  let l=new Date(year, month+1, 0);
   return Math.ceil( (l.getDate()- (l.getDay()?l.getDay():7))/7 )+1;
  }
 
 
 function getArr(n) {
-  var a = [];
-  for (var i = 0; i < n ; i++) { 
+  let a = [];
+  for (let i = 0; i < n ; i++) { 
     a.push(i)
   }
   return a
